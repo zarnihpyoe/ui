@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <!-- <link rel="stylesheet" href="plot.css"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    :root {
+      --dark-color: #333;
+      --light-color: #fff;
+      --inactive-color: #ccc;
+    }
+
+    main {
+      display: grid;
+      grid-template-areas: "instruction interactive";
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .instruction {
+      grid-area: instruction;
+      height: 100vh;
+      display: grid;
+      grid-template-areas:
+        "content"
+        "nav-chapters";
+      grid-template-rows: 1fr auto;
+    }
+    .instruction {
+      background-color: var(--light-color);
+    }
+
+    .interactive {
+      grid-area: interactive;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .interactive {
+      background-color: var(--dark-color);
+    }
+
+    .content {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 24px;
+      overflow-y: scroll;
+      font-size: 16px;
+      color: var(--dark-color);
+    }
+
+    .nav-chapters {
+      grid-area: nav-chapters;
+      display: grid;
+      grid-template-areas: "previous _ next";
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* Chapter Navigation Buttons */
+    .nav-chapters-btn {
+      text-decoration: none;
+
+      color: var(--inactive-color);
+      padding: 12px;
+      display: inline-block;
+      /* background: #999; */
+      text-align: center;
+    }
+    a:hover.nav-chapters-btn {
+      color: var(--dark-color);
+    }
+
+    .previous {
+      grid-area: previous;
+    }
+    .next {
+      grid-area: next;
+    }
+
+    .nav-chapters > i {
+      font-size: 36px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="instruction">
+      <div class="content">
+        <h1>Introduction</h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus nisi et ante sollicitudin, nec dictum mauris ullamcorper. Pellentesque eget felis sed lectus luctus imperdiet et id mi. Integer sit amet metus at mi tristique bibendum quis a eros. Curabitur eu venenatis ex, eu aliquam tortor. Praesent luctus lobortis consectetur. Cras accumsan, nunc eu imperdiet vestibulum, metus dolor malesuada eros, sed pharetra metus odio ac mi. In efficitur justo a ex fermentum, at sagittis tortor laoreet. Sed vestibulum ullamcorper eros, quis dignissim tortor egestas in. Donec mattis nulla ex, ut efficitur mi ultricies eget. Quisque cursus, dolor eu vehicula mollis, quam mauris euismod velit, quis dignissim nisl magna at est. Duis sem est, condimentum euismod nibh eu, viverra bibendum diam. Vestibulum porttitor eros est, quis mattis risus mollis sit amet. Duis suscipit dolor id condimentum venenatis. Cras purus ante, venenatis id auctor eget, ornare eget quam. Praesent imperdiet facilisis mi in pretium. Fusce lobortis, mauris ac viverra lacinia, diam dui facilisis lorem, ac ultricies tellus urna vitae metus.
+        <br/>
+        <br/>
+          Aenean egestas, felis sed tempus feugiat, neque ipsum porttitor est, a sollicitudin turpis sapien id quam. Suspendisse et ipsum ex. Aenean non pharetra ante, at semper ante. Praesent non accumsan nulla, vel consectetur nisl. Maecenas sit amet sollicitudin sapien. Quisque posuere aliquam volutpat. Proin consequat metus augue, vel dictum ante lacinia sit amet. Donec eget magna sit amet nisl scelerisque dictum. Maecenas nec lorem iaculis, pellentesque sem a, pretium nulla. Curabitur bibendum, odio eget hendrerit feugiat, orci libero cursus ante, quis tempus arcu nisi euismod velit. Nam vehicula neque posuere enim ultricies lobortis. Integer nisi augue, gravida ut diam vel, placerat bibendum massa.
+        <br/>
+        <br/>
+          Integer quis convallis diam. Fusce iaculis laoreet magna vel fringilla. Duis nibh augue, laoreet vel neque vel, condimentum porta felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tincidunt fermentum eros, ut convallis neque gravida eget. Aenean condimentum eleifend eros quis condimentum. Aenean enim dui, elementum sit amet dapibus sit amet, posuere ac magna. In vitae feugiat diam. Donec ultrices elementum leo, ut mollis lectus egestas at. Etiam magna tortor, pulvinar in luctus eget, accumsan rhoncus purus. Vivamus maximus risus orci, ut vehicula ipsum semper eu. Fusce risus nunc, vestibulum nec lacinia eu, malesuada sit amet velit. Pellentesque diam est, posuere vehicula enim vitae, pretium semper tortor. Duis a velit porta, pretium nisi vitae, ullamcorper dui. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus nisi et ante sollicitudin, nec dictum mauris ullamcorper. Pellentesque eget felis sed lectus luctus imperdiet et id mi. Integer sit amet metus at mi tristique bibendum quis a eros. Curabitur eu venenatis ex, eu aliquam tortor. Praesent luctus lobortis consectetur. Cras accumsan, nunc eu imperdiet vestibulum, metus dolor malesuada eros, sed pharetra metus odio ac mi. In efficitur justo a ex fermentum, at sagittis tortor laoreet. Sed vestibulum ullamcorper eros, quis dignissim tortor egestas in. Donec mattis nulla ex, ut efficitur mi ultricies eget. Quisque cursus, dolor eu vehicula mollis, quam mauris euismod velit, quis dignissim nisl magna at est. Duis sem est, condimentum euismod nibh eu, viverra bibendum diam. Vestibulum porttitor eros est, quis mattis risus mollis sit amet. Duis suscipit dolor id condimentum venenatis. Cras purus ante, venenatis id auctor eget, ornare eget quam. Praesent imperdiet facilisis mi in pretium. Fusce lobortis, mauris ac viverra lacinia, diam dui facilisis lorem, ac ultricies tellus urna vitae metus.
+        <br/>
+        <br/>
+          Aenean egestas, felis sed tempus feugiat, neque ipsum porttitor est, a sollicitudin turpis sapien id quam. Suspendisse et ipsum ex. Aenean non pharetra ante, at semper ante. Praesent non accumsan nulla, vel consectetur nisl. Maecenas sit amet sollicitudin sapien. Quisque posuere aliquam volutpat. Proin consequat metus augue, vel dictum ante lacinia sit amet. Donec eget magna sit amet nisl scelerisque dictum. Maecenas nec lorem iaculis, pellentesque sem a, pretium nulla. Curabitur bibendum, odio eget hendrerit feugiat, orci libero cursus ante, quis tempus arcu nisi euismod velit. Nam vehicula neque posuere enim ultricies lobortis. Integer nisi augue, gravida ut diam vel, placerat bibendum massa.
+        <br/>
+        <br/>
+          Integer quis convallis diam. Fusce iaculis laoreet magna vel fringilla. Duis nibh augue, laoreet vel neque vel, condimentum porta felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tincidunt fermentum eros, ut convallis neque gravida eget. Aenean condimentum eleifend eros quis condimentum. Aenean enim dui, elementum sit amet dapibus sit amet, posuere ac magna. In vitae feugiat diam. Donec ultrices elementum leo, ut mollis lectus egestas at. Etiam magna tortor, pulvinar in luctus eget, accumsan rhoncus purus. Vivamus maximus risus orci, ut vehicula ipsum semper eu. Fusce risus nunc, vestibulum nec lacinia eu, malesuada sit amet velit. Pellentesque diam est, posuere vehicula enim vitae, pretium semper tortor. Duis a velit porta, pretium nisi vitae, ullamcorper dui. 
+        </div>
+      <div class="nav-chapters">
+        <a href="#previous" class="nav-chapters-btn previous"><i class="material-icons">keyboard_arrow_left</i></a>
+        <a href="#next" class="nav-chapters-btn next"><i class="material-icons">keyboard_arrow_right</i></a>
+      </div>
+    </section>
+    <section class="interactive">
+      <!-- <svg class="plot" id="p1"></svg> -->
+    </section>
+  </main>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+  <script src="plot.js"></script> -->
+</body>
+</html>
